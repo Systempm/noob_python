@@ -96,9 +96,7 @@ class message_url:
 if __name__ == '__main__':
     ming=message_url
     pzdata=ming.file_openpz("ming")  #先给我打开配置文件  #1()
-    # 根据配置文件 连    接数据库！
-
-
+    # 根据配置文件 连    接数据库！!
     collection = ming.con_mongodb(ming,dbname=pzdata['dbname'],table= pzdata['tablename'])  # 连接数据库 拿到 表的collection
     # headers  的处理 还是要多多费心思 一下   可以选择  包括有cookies什么的
     #爬取数据部分
