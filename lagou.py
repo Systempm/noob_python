@@ -41,7 +41,13 @@ class message_url:
         table="db."+table
         account = eval(table)
         return account
-    def file_openpz(self,url='F:\\new.xml'):
+
+    # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
+    # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
+    # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
+
+
+    def file_openpz(self,url='F:\\new.xml'):                     # 此处配置文件位置 ！！！！！！
         aaa=""
         print (url)
         fopen = open(url, 'r')
