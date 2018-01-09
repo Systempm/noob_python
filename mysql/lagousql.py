@@ -27,7 +27,8 @@ sqlc = '''
                tedian varchar(255),
                logo varchar(255),
                gongsijieshao varchar(255),
-               xiangxiwangzhi varchar(255))DEFAULT CHARSET=utf8;
+               xiangxiwangzhi varchar(255),
+               rukushijian datetime )DEFAULT CHARSET=utf8;
                '''
 
 try:

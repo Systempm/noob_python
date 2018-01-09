@@ -17,11 +17,15 @@
 
 '''
 import time
+
+import datetime
 import pymysql
 import requests
 from bs4 import BeautifulSoup
 
+
 class message_url:
+    global pzdata
     def message_body(self,url,headers):
         response=requests.post(url,headers=headers)
         response.close()#11
@@ -31,24 +35,27 @@ class message_url:
         print (m)
 
 
-
-
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
     def writedb(self,conn,list):
+        global pzdata
+        print (list)
         cur = conn.cursor()
         sqlc = '''
-                       create table lagous(
+                       create table {tablename}(
                        id int(11) not null auto_increment primary key,
                        gongsi varchar(255) not null,
                        zhiwei varchar(255),
                        gongzi varchar(255),
+                       didian varchar(255),
                        tedian varchar(255),
                        logo varchar(255),
                        gongsijieshao varchar(255),
-                       xiangxiwangzhi varchar(255))DEFAULT CHARSET=utf8;
-                       '''
+                       xiangxiwangzhi varchar(255),
+                       rukushijian datetime 
+                       )DEFAULT CHARSET=utf8;
+                       '''.format(tablename=pzdata['tablename'])
 
         try:
             A = cur.execute(sqlc)
@@ -58,17 +65,19 @@ class message_url:
             print("错误")
 
         sqla = '''
-                insert into  lagous(gongsi,zhiwei)
-                values(%s,%s);
-               '''
+                insert into  {tablename}(gongsi,zhiwei,gongzi,didian,tedian,logo,gongsijieshao,xiangxiwangzhi,rukushijian)
+                values(%s,%s,%s,%s,%s,%s,%s,%s,%s);
+               '''.format(tablename=pzdata['tablename'])
         try:
-            B = cur.execute(sqla, (list[1], list[2]))
+            dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            B = cur.execute(sqla, (list[0], list[1],list[2],list[3],list[4],list[5],list[6],list[7], dt))
             conn.commit()
             print('成功')
         except:
             print("错误")
 
-    def file_openpz(self,url='F:\\new.xml'):                     # 此处配置文件位置 ！！！！！！
+    def file_openpz(self,url='D:\\pyProject\\toexcl\\mysql\\new.xml'):                     # 此处配置文件位置 ！！！！！！
         aaa=""
         print (url)
         fopen = open(url, 'r')
@@ -136,16 +145,3 @@ if __name__ == '__main__':
                }
     ming.start_craw("ming",headers=headers,local=pzdata['local'],pagenum=pzdata['howmanypage'],conn=conn)
     # url1="https://www.lagou.com/beijing-zhaopin/?utm_source=m_cf_cpt_baidu_pc"
-
-
-
-
-
-
-
-
-
-
-
-
-

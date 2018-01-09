@@ -34,6 +34,9 @@
 # print (aa['hahaha'])
 # print (type(aa))
 import pymongo
+import time
+
+
 
 '''
 for item in collection.find():
@@ -62,7 +65,43 @@ for item in collection.find():
     print ("111")
     print (item)
 '''
-class sa :
-    def message_body(self, a=3):
-        print (a)
-sa .message_body("asa",a=6)
+# class sa :
+#     def message_body(self, a=3):
+#         print (a)
+# sa .message_body("asa",a=6)
+
+
+# ISOTIMEFORMAT='%Y-%m-%d %X'
+# print(time.strftime('%Y-%m-%d ',time.localtime(time.time())))
+# print(time.strftime( '%Y-%m-%d %X', time.localtime( time.time() ) ))
+
+#now = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%S")  #这是对的
+
+
+# 写文件
+# with open("douban.txt", "w") as f:
+#     f.write("这是个测试！1")
+#
+
+import pymysql
+
+# 打开数据库连接
+db = pymysql.connect(host='127.0.0.1', user='root', password='213', db='lagou', charset="utf8")
+
+# 使用cursor()方法获取操作游标
+cursor = db.cursor()
+
+# 使用execute方法执行SQL语句
+cursor.execute("SELECT * From lagou201801091217")
+# .fetchall() 获取全部：
+results = cursor.fetchall()
+
+resultsone  = cursor.fetchall()
+# 使用 fetchone() 方法获取一条数据
+# for i in results:
+#
+#
+#    print ("Database version : %s " ,i)
+
+# 关闭数据库连接
+db.close()
