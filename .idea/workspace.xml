@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67481994-2feb-4974-afbd-9757d109029a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/dealsqltojson.py" afterPath="$PROJECT_DIR$/mysql/dealsqltojson.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/lagouusemysql.py" afterPath="$PROJECT_DIR$/mysql/lagouusemysql.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysql/new.xml" afterPath="$PROJECT_DIR$/mysql/new.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,10 +14,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/toexcl$dealsqltojson.coverage" NAME="dealsqltojson Coverage Results" MODIFIED="1515598078781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
+    <SUITE FILE_PATH="coverage/toexcl$dealsqltojson.coverage" NAME="dealsqltojson Coverage Results" MODIFIED="1515669321693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
     <SUITE FILE_PATH="coverage/toexcl$mongodbtoexcel.coverage" NAME="mongodbtoexcel Coverage Results" MODIFIED="1513930968606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/toexcl$cnmbs.coverage" NAME="cnmbs Coverage Results" MODIFIED="1514213257193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/toexcl$lagouusemysql.coverage" NAME="lagouusemysql Coverage Results" MODIFIED="1515471988246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
+    <SUITE FILE_PATH="coverage/toexcl$lagouusemysql.coverage" NAME="lagouusemysql Coverage Results" MODIFIED="1515669756762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
     <SUITE FILE_PATH="coverage/toexcl$bs4a.coverage" NAME="bs4a Coverage Results" MODIFIED="1514378355571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/toexcl$trymysql.coverage" NAME="trymysql Coverage Results" MODIFIED="1515415513099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/toexcl$bs4.coverage" NAME="bs4 Coverage Results" MODIFIED="1514119500351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -30,28 +32,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dealsqltojson.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysql/dealsqltojson.py">
+      <file leaf-file-name="lagousql.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysql/lagousql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="93" column="35" lean-forward="true" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+            <state relative-caret-position="817">
+              <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
               <folding>
-                <element signature="e#197#212#0" expanded="true" />
-                <marker date="1515598221672" expanded="true" signature="940:971" ph="SELECT * Fro... lagou201801091217" />
+                <marker date="1515471280143" expanded="true" signature="293:627" ph="create table... lagous" />
+                <marker date="1515471280143" expanded="true" signature="293:708" ph="create table... lagous" />
+                <marker date="1515471280143" expanded="true" signature="839:895" ph="insert into coffee1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lagouusemysql.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysql/new.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lagouusemysql.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysql/lagouusemysql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="69" />
+            <state relative-caret-position="232">
+              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="e#231#242#0" expanded="true" />
-                <marker date="1515471975742" expanded="true" signature="835:1395" ph="create table... lagous" />
-                <marker date="1515471975742" expanded="true" signature="1636:1793" ph="insert into lagous" />
+                <marker date="1515723150538" expanded="true" signature="1087:1729" ph="create table... lagous" />
+                <marker date="1515723150538" expanded="true" signature="1970:2151" ph="insert into lagous" />
               </folding>
             </state>
           </provider>
@@ -96,9 +109,10 @@
         <option value="$PROJECT_DIR$/trymysql.py" />
         <option value="$PROJECT_DIR$/mysql/trymysql.py" />
         <option value="$PROJECT_DIR$/mysql/lagousql.py" />
-        <option value="$PROJECT_DIR$/mysql/lagouusemysql.py" />
         <option value="$PROJECT_DIR$/thinknext.py" />
         <option value="$PROJECT_DIR$/mysql/dealsqltojson.py" />
+        <option value="$PROJECT_DIR$/mysql/new.xml" />
+        <option value="$PROJECT_DIR$/mysql/lagouusemysql.py" />
       </list>
     </option>
   </component>
@@ -108,7 +122,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1309" />
@@ -192,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dealsqltojson">
+  <component name="RunManager" selected="Python.lagouusemysql">
     <configuration name="dealsqltojson" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,9 +306,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.dealsqltojson" />
-        <item index="1" class="java.lang.String" itemvalue="Python.thinknext" />
-        <item index="2" class="java.lang.String" itemvalue="Python.lagouusemysql" />
+        <item index="0" class="java.lang.String" itemvalue="Python.lagouusemysql" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dealsqltojson" />
+        <item index="2" class="java.lang.String" itemvalue="Python.thinknext" />
         <item index="3" class="java.lang.String" itemvalue="Python.lagousql" />
         <item index="4" class="java.lang.String" itemvalue="Python.trymysql" />
       </list>
@@ -314,9 +328,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21269841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -639,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysql/new.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongodbtoexcel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -679,17 +686,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1515422723788" expanded="true" signature="956:1143" ph="create table... coffee1" />
-            <marker date="1515422723788" expanded="true" signature="1394:1448" ph="insert into coffee1" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python36/Lib/_strptime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="364" column="0" lean-forward="false" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/new.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/dealsqltojson.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysql/lagousql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="817">
+          <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding>
             <marker date="1515471280143" expanded="true" signature="293:627" ph="create table... lagous" />
             <marker date="1515471280143" expanded="true" signature="293:708" ph="create table... lagous" />
@@ -700,31 +725,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysql/lagouusemysql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="69" />
+        <state relative-caret-position="232">
+          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
             <element signature="e#231#242#0" expanded="true" />
-            <marker date="1515471975742" expanded="true" signature="835:1395" ph="create table... lagous" />
-            <marker date="1515471975742" expanded="true" signature="1636:1793" ph="insert into lagous" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python36/Lib/_strptime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="364" column="0" lean-forward="false" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysql/dealsqltojson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="93" column="35" lean-forward="true" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
-          <folding>
-            <element signature="e#197#212#0" expanded="true" />
-            <marker date="1515598221672" expanded="true" signature="940:971" ph="SELECT * Fro... lagou201801091217" />
+            <marker date="1515723150538" expanded="true" signature="1087:1729" ph="create table... lagous" />
+            <marker date="1515723150538" expanded="true" signature="1970:2151" ph="insert into lagous" />
           </folding>
         </state>
       </provider>

@@ -32,9 +32,15 @@ class message_url:
         print( type(response))
         m=response.text
         return m
-        print (m)
 
+    def split_slary(self, salary):
 
+        lowsalary, highsalary = salary.split("-")
+        lenlow=len(lowsalary)
+        lenhigh = len(highsalary)
+        lowsalary=lowsalary[:lenlow-1]
+        highsalary = highsalary[:lenhigh - 1]
+        return lowsalary,highsalary
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
     # 此处配置文件位置 ！！！！！！# 此处配置文件位置 ！！！！！！
@@ -48,6 +54,8 @@ class message_url:
                        gongsi varchar(255) not null,
                        zhiwei varchar(255),
                        gongzi varchar(255),
+                       minslary int(11),
+                       maxslary int(11),
                        didian varchar(255),
                        tedian varchar(255),
                        logo varchar(255),
@@ -65,13 +73,13 @@ class message_url:
             print("错误")
 
         sqla = '''
-                insert into  {tablename}(gongsi,zhiwei,gongzi,didian,tedian,logo,gongsijieshao,xiangxiwangzhi,rukushijian)
-                values(%s,%s,%s,%s,%s,%s,%s,%s,%s);
+                insert into  {tablename}(gongsi,zhiwei,gongzi,minslary,maxslary,didian,tedian,logo,gongsijieshao,xiangxiwangzhi,rukushijian)
+                values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);
                '''.format(tablename=pzdata['tablename'])
         try:
             dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-            B = cur.execute(sqla, (list[0], list[1],list[2],list[3],list[4],list[5],list[6],list[7], dt))
+            B = cur.execute(sqla, (list[0], list[1],list[2],list[3],list[4],list[5],list[6],list[7],list[8],list[9], dt))
             conn.commit()
             print('成功')
         except:
@@ -122,7 +130,9 @@ class message_url:
                 logourl = logourlsoup[i].img.attrs['src']
                 companyinformation = companyinformationsoup[i].a.attrs['href']
                 hrefurl = urlsoup[i].attrs['href']
-                list = [companyname, positisioniame, salary, location, introduction, logourl, companyinformation,hrefurl]
+                #切分 salary
+                lowsalary,highsalary= ming.split_slary("ming",salary)
+                list = [companyname, positisioniame, salary,int(lowsalary),int(highsalary), location, introduction, logourl, companyinformation,hrefurl]
                 ming.writedb("ming",conn,list)
 
             print("一页完成")
