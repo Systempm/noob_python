@@ -107,12 +107,17 @@ for item in collection.find():
 # # 关闭数据库连接
 # db.close()
 
-str ='''aaaaaa
-'''
-print (str)
+# str ='''aaaaaa
+# '''
+# print (str)
+#
+#
+# a = range(1,20)
+# for i in a :
+#      print (i )
+# print (a)
 
-
-a = range(1,20)
-for i in a :
-     print (i )
-print (a)
+if 0:
+     print ("0")
+if 1:
+     print ("1")

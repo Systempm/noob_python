@@ -43,7 +43,7 @@ def get_json(url,cookies,headers,datas):
     content = requests.post(url=url,cookies=cookies,headers=headers,data=datas)
     # content.encoding = 'utf-8'
     # resultstr= content.text
-    time.sleep(15 + random.randint(0, 4))
+    time.sleep(3 + random.randint(0, 4))
     result = content.json()
     return result
 #北京
@@ -58,13 +58,13 @@ def go_spider(list):
     for i in list:
         datas1 = {'first': False, 'pn': '{pn}'.format(pn=i), 'kd': 'java' }
         resultset = get_json(url, cookies, headers, datas1)
-        print (resultset["success"])
-        print(resultset)
+
+        # print(resultset)
         # 判断success  是不是爬成功  ：
         return_result=resultset["success"]
-        # if  return_result== True:
-            #此处 过滤   录入到数据库
-
+        if  return_result== True:
+        #此处 过滤   录入到数据库
+               process_data(resultset)
         #
         #
             # resultset = json.dumps(resultset, ensure_ascii=False)
@@ -80,7 +80,14 @@ def get_pnrangelist():
     # 先爬第一页 然后拿到pn的数量 还有total 的数  total 准备放到其他地方 也是一个重要数据
     totalcount, pn = get_pn(url, cookies, headers, datas)
     return range(1,pn+1)
+def split_slary(salary):
 
+        lowsalary, highsalary = salary.split("-")
+        lenlow=len(lowsalary)
+        lenhigh = len(highsalary)
+        lowsalary=lowsalary[:lenlow-1]
+        highsalary = highsalary[:lenhigh - 1]
+        return lowsalary,highsalary
 def con_db():
 
 
@@ -90,7 +97,7 @@ def con_db():
     return conn ,cur
 def db_createtable(conn,cur,tablename):
     sqlc = '''
-                        create table {tablename}(
+                        create table {aaa}(
                         id int(11) not null auto_increment primary key,
                         companyShortName varchar(255) not null,
                         companyFullName varchar(255),
@@ -106,11 +113,9 @@ def db_createtable(conn,cur,tablename):
                         district varchar(255),
                         businessZones varchar(255),
                         education varchar(255),
-                        city varchar(255),
-                       firstType varchar(255),
+                        firstType varchar(255),
                         createTime datetime )DEFAULT CHARSET=utf8;
-                        '''.format(tablename=tablename)
-
+                        '''.format(aaa=tablename)
     try:
         A = cur.execute(sqlc)
         conn.commit()
@@ -128,7 +133,23 @@ def db_selectpositionId(conn,cur,positionId):
             print('成功',B)
         except:
             print("错误")
-
+# def db_inserttable(conn,cur,resultlist):
+#     companyShortName=resultlist["companyShortName"]
+#     companyFullName=resultlist["companyFullName"]
+#     positionName=resultlist["positionName"]
+#     positionId=resultlist["positionId"]
+#     salary=resultlist["salary"]
+#     minslary=resultlist["minslary"]
+#     maxslary=resultlist["maxslary"]
+#     companyLogo=resultlist["companyLogo"]
+#     companySize=resultlist["companySize"]
+#     companyLabelList=resultlist["companyLabelList"]
+#     city=resultlist["city"]
+#     district=resultlist["district"]
+#     businessZones=resultlist["businessZones"]
+#     education=resultlist["education"]
+#     firstType=resultlist["firstType"]
+#     createTime=resultlist["createTime"]
 
 def db_select(conn, cur, id):
     sqla = '''
@@ -144,19 +165,111 @@ def db_select(conn, cur, id):
     except:
         print("错误")
 
-
+###改表
 def process_data(list):
-
-        print(type(list))
-        list = json.loads(list)
-        print (type(list))
+       # 参数  tablename ，
+       #  print(type(list))
+       #  list = json.loads(list)
+        # print (type(list))
         result=list["content"]["positionResult"]["result"]
+
         #  每一条 拿出来 positionId 看有没有  有更新时间 没有录入数据
         for i in result:
-            positionId=i["positionId"]
-            print (i["positionName"] )
+            # 有数据返回0 不执行if  没有数据返回1  执行if语句
+
+            if Select_positionidData("lagoushanghai",i["positionId"]):
+               l=get_usefullist(i)
+               InsertData("lagoushanghai",l)
+
+def get_usefullist(list):
+    dict={}
+    dict["companyShortName"]=list["companyShortName"]
+    dict["companyFullName"] = list["companyFullName"]
+    dict["positionName"] = list["positionName"]
+    dict["positionId"] = list["positionId"]
+    dict["positionAdvantage"] = list["positionAdvantage"]
+    slary =list["salary"]
+    dict["salary"] =slary
+    #min  max
+    minslary,maxslary=split_slary(slary)
+    dict["minslary"] = minslary
+    dict["maxslary"] = maxslary
+    dict["workYear"] = list["workYear"]
+    dict["education"] = list["education"]
+    dict["city"] = list["city"]
+    dict["district"] = list["district"]
+    dict["companySize"] = list["companySize"]
+    dict["companyLogo"] = "www.lgstatic.com/thumbnail_120x120/"+list["companyLogo"]
+    dict["companyLabelList"] = list["companyLabelList"]
+    dict["createTime"] = list["createTime"]
+    dict["firstType"] = list["firstType"]
+    return dict
+def InsertData(TableName, dic):
+    print (TableName)
+    try:
+        conn = pymysql.connect(host='localhost', user='root', passwd='213', db='lagou', port=3306,charset="utf8")  # 链接数据库
+        cur = conn.cursor()
+        COLstr = ''  # 列的字段
+        ROWstr = ''  # 行字段
+
+        ColumnStyle = 'VARCHAR(70)'
+        for key in dic.keys():
+            COLstr = COLstr + '' + key + ' '+ColumnStyle + ','
+            ROWstr = (ROWstr + '"%s"' + ',') % (dic[key])
+
+
+        # 推断表是否存在，存在运行try。不存在运行except新建表，再insert
+        try:
+            cur.execute("SELECT * FROM  %s" % (TableName))
+        except :
+            print("chuangjianyichang")
+            cur.execute("CREATE TABLE %s (%s) DEFAULT CHARSET=utf8;" % (TableName, COLstr[:-1]))
+            cur.execute("alter table %s modify column companyLogo VARCHAR(255);" %(TableName))
+            cur.execute("alter table %s modify column minslary int(4);" % (TableName))
+            cur.execute("alter table %s modify column createTime datetime;" % (TableName))
+        try:
+            cur.execute("INSERT INTO %s VALUES (%s)" % (TableName, ROWstr[:-1]))
+            print ("插了一条")
+        except:
+            print("插入异常")
+
+        conn.commit()
+        cur.close()
+        conn.close()
+
+    except :
+        print("yichang")
+def Select_positionidData(TableName, positionid):
+    #有数据返回0 不执行if  没有数据返回1  执行if语句
+    try:
+        conn = pymysql.connect(host='localhost', user='root', passwd='213', db='lagou', port=3306,charset="utf8")  # 链接数据库
+        cur = conn.cursor()
+        try:
+            cur.execute("SELECT * FROM  %s" % (TableName))
+        except :
+            print("没这个表兄弟")
+            return 1
+        try:
+            A=cur.execute("Select * from %s where positionid=%s" % (TableName, positionid))
+            print (A)
+            if A!=0 :
+                return 0
+            else :
+                return 1
+        except:
+            print("查询异常")
+            return 1
+
+        conn.commit()
+        cur.close()
+        conn.close()
+
+    except :
+        print("链接异常")
+
+
 if __name__ == '__main__':
-    city = "北京"
+    city = "上海"
     url = 'https://www.lagou.com/jobs/positionAjax.json?city={city}&needAddtionalResult=false&isSchoolJob=0'.format(
         city=city)
     # url='https://www.lagou.com/jobs/positionAjax.json?city=%E6%B2%88%E9%98%B3&needAddtionalResult=false&isSchoolJob=0'
@@ -175,14 +288,19 @@ if __name__ == '__main__':
     # print (resultset)
 
     # aaa=""
-    # fopen = open('D:\\pyProject\\toexcl\\lagou-chonggou\\北京1.13pm7\\北京java1.txt', 'r')
+    # fopen = open('D:\\pyProject\\toexcl\\lagou-chonggou\\北京1.13pm7\\北京java2.txt', 'r')
     # for eachLine in fopen:
     #     aaa = aaa + eachLine
     # fopen.close()
+    #
     # process_data(aaa)
 
-    conn,cur=con_db()
-    db_select(conn,cur,3)
 
-    # pnlist= get_pnrangelist()
-    # go_spider(pnlist)
+
+    # #
+    # # db_createtable(conn,cur,"lagouchonggou")
+    #
+    # db_select(conn,cur,3)
+
+    pnlist= get_pnrangelist()
+    go_spider(pnlist)
