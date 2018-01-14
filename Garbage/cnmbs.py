@@ -14,7 +14,7 @@
 '''
 from pymongo import MongoClient
 
-import  mongodb_w_r
+
 def  remove_space(str):
     str=str.split(" ")
     newlist = []
