@@ -81,12 +81,17 @@ def get_pnrangelist():
     totalcount, pn = get_pn(url, cookies, headers, datas)
     return range(1,pn+1)
 def split_slary(salary):
-
-        lowsalary, highsalary = salary.split("-")
-        lenlow=len(lowsalary)
-        lenhigh = len(highsalary)
-        lowsalary=lowsalary[:lenlow-1]
-        highsalary = highsalary[:lenhigh - 1]
+        print (salary)
+        try:
+           lowsalary, highsalary = salary.split("-")
+           lenlow=len(lowsalary)
+           lenhigh = len(highsalary)
+           lowsalary=lowsalary[:lenlow-1]
+           highsalary = highsalary[:lenhigh - 1]
+        # bug  会出现 “20k以上”这样的数据
+        except:
+            lowsalary=0
+            highsalary=0
         return lowsalary,highsalary
 def con_db():
 
@@ -177,9 +182,9 @@ def process_data(list):
         for i in result:
             # 有数据返回0 不执行if  没有数据返回1  执行if语句
 
-            if Select_positionidData("lagoushanghai",i["positionId"]):
+            if Select_positionidData("lagou",i["positionId"]):
                l=get_usefullist(i)
-               InsertData("lagoushanghai",l)
+               InsertData("lagou",l)
 
 def get_usefullist(list):
     dict={}
