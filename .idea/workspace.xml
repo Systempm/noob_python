@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="67481994-2feb-4974-afbd-9757d109029a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lagou-chonggou/b.py" afterPath="$PROJECT_DIR$/lagou-chonggou/b.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +15,7 @@
     <SUITE FILE_PATH="coverage/toexcl$dealsqltojson.coverage" NAME="dealsqltojson Coverage Results" MODIFIED="1515669321693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
     <SUITE FILE_PATH="coverage/toexcl$mongodbtoexcel.coverage" NAME="mongodbtoexcel Coverage Results" MODIFIED="1513930968606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/toexcl$cnmbs.coverage" NAME="cnmbs Coverage Results" MODIFIED="1514213257193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/toexcl$b.coverage" NAME="b Coverage Results" MODIFIED="1516331738608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lagou-chonggou" />
+    <SUITE FILE_PATH="coverage/toexcl$b.coverage" NAME="b Coverage Results" MODIFIED="1517144718827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lagou-chonggou" />
     <SUITE FILE_PATH="coverage/toexcl$thinknext__1_.coverage" NAME="thinknext (1) Coverage Results" MODIFIED="1515940467105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Garbage" />
     <SUITE FILE_PATH="coverage/toexcl$zhaopinjihe.coverage" NAME="zhaopinjihe Coverage Results" MODIFIED="1515757747581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NBpythonspider" />
     <SUITE FILE_PATH="coverage/toexcl$lagouusemysql.coverage" NAME="lagouusemysql Coverage Results" MODIFIED="1515753792672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="b.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lagou-chonggou/b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+            <state relative-caret-position="241">
+              <caret line="281" column="52" lean-forward="true" selection-start-line="281" selection-start-column="52" selection-end-line="281" selection-end-column="52" />
               <folding>
                 <element signature="e#115#129#0" expanded="true" />
                 <element signature="e#374#907#0" expanded="false" />
@@ -55,20 +54,20 @@
                 <element signature="e#5984#6862#0" expanded="false" />
                 <element signature="e#6899#8135#0" expanded="false" />
                 <element signature="e#8190#8899#0" expanded="false" />
-                <marker date="1516331733708" expanded="true" signature="3089:3986" ph="create table... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="4237:4277" ph="select * fro... lagou" />
-                <marker date="1516331733708" expanded="true" signature="5249:5280" ph="select * fro... lala" />
-                <marker date="1516331733708" expanded="true" signature="7410:7425" ph="SELECT * FRO... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="7525:7545" ph="CREATE TABLE... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="7525:7566" ph="CREATE TABLE... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="7622:7675" ph="alter table nmbcao... " />
-                <marker date="1516331733708" expanded="true" signature="7717:7761" ph="alter table missing_value... " />
-                <marker date="1516331733708" expanded="true" signature="7804:7848" ph="alter table missing_value... " />
-                <marker date="1516331733708" expanded="true" signature="7804:7852" ph="alter table missing_value... " />
-                <marker date="1516331733708" expanded="true" signature="7908:7934" ph="INSERT INTO missing_value... " />
-                <marker date="1516331733708" expanded="true" signature="8419:8434" ph="SELECT * FRO... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="8559:8593" ph="Select * fro... missing_value" />
-                <marker date="1516331733708" expanded="true" signature="8565:8575" ph="INSERT INTO missing_value... " />
+                <marker date="1517144715151" expanded="true" signature="3089:3986" ph="create table... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="4237:4277" ph="select * fro... lagou" />
+                <marker date="1517144715151" expanded="true" signature="5249:5280" ph="select * fro... lala" />
+                <marker date="1517144715151" expanded="true" signature="7410:7425" ph="SELECT * FRO... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="7525:7545" ph="CREATE TABLE... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="7525:7566" ph="CREATE TABLE... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="7622:7675" ph="alter table nmbcao... " />
+                <marker date="1517144715151" expanded="true" signature="7717:7761" ph="alter table missing_value... " />
+                <marker date="1517144715151" expanded="true" signature="7804:7848" ph="alter table missing_value... " />
+                <marker date="1517144715151" expanded="true" signature="7804:7852" ph="alter table missing_value... " />
+                <marker date="1517144715151" expanded="true" signature="7908:7934" ph="INSERT INTO missing_value... " />
+                <marker date="1517144715151" expanded="true" signature="8419:8434" ph="SELECT * FRO... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="8559:8593" ph="Select * fro... missing_value" />
+                <marker date="1517144715151" expanded="true" signature="8565:8575" ph="INSERT INTO missing_value... " />
               </folding>
             </state>
           </provider>
@@ -171,7 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +197,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -759,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lagou-chonggou/b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+        <state relative-caret-position="241">
+          <caret line="281" column="52" lean-forward="true" selection-start-line="281" selection-start-column="52" selection-end-line="281" selection-end-column="52" />
           <folding>
             <element signature="e#115#129#0" expanded="true" />
             <element signature="e#374#907#0" expanded="false" />
@@ -776,20 +775,20 @@
             <element signature="e#5984#6862#0" expanded="false" />
             <element signature="e#6899#8135#0" expanded="false" />
             <element signature="e#8190#8899#0" expanded="false" />
-            <marker date="1516331733708" expanded="true" signature="3089:3986" ph="create table... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="4237:4277" ph="select * fro... lagou" />
-            <marker date="1516331733708" expanded="true" signature="5249:5280" ph="select * fro... lala" />
-            <marker date="1516331733708" expanded="true" signature="7410:7425" ph="SELECT * FRO... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="7525:7545" ph="CREATE TABLE... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="7525:7566" ph="CREATE TABLE... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="7622:7675" ph="alter table nmbcao... " />
-            <marker date="1516331733708" expanded="true" signature="7717:7761" ph="alter table missing_value... " />
-            <marker date="1516331733708" expanded="true" signature="7804:7848" ph="alter table missing_value... " />
-            <marker date="1516331733708" expanded="true" signature="7804:7852" ph="alter table missing_value... " />
-            <marker date="1516331733708" expanded="true" signature="7908:7934" ph="INSERT INTO missing_value... " />
-            <marker date="1516331733708" expanded="true" signature="8419:8434" ph="SELECT * FRO... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="8559:8593" ph="Select * fro... missing_value" />
-            <marker date="1516331733708" expanded="true" signature="8565:8575" ph="INSERT INTO missing_value... " />
+            <marker date="1517144715151" expanded="true" signature="3089:3986" ph="create table... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="4237:4277" ph="select * fro... lagou" />
+            <marker date="1517144715151" expanded="true" signature="5249:5280" ph="select * fro... lala" />
+            <marker date="1517144715151" expanded="true" signature="7410:7425" ph="SELECT * FRO... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="7525:7545" ph="CREATE TABLE... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="7525:7566" ph="CREATE TABLE... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="7622:7675" ph="alter table nmbcao... " />
+            <marker date="1517144715151" expanded="true" signature="7717:7761" ph="alter table missing_value... " />
+            <marker date="1517144715151" expanded="true" signature="7804:7848" ph="alter table missing_value... " />
+            <marker date="1517144715151" expanded="true" signature="7804:7852" ph="alter table missing_value... " />
+            <marker date="1517144715151" expanded="true" signature="7908:7934" ph="INSERT INTO missing_value... " />
+            <marker date="1517144715151" expanded="true" signature="8419:8434" ph="SELECT * FRO... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="8559:8593" ph="Select * fro... missing_value" />
+            <marker date="1517144715151" expanded="true" signature="8565:8575" ph="INSERT INTO missing_value... " />
           </folding>
         </state>
       </provider>
